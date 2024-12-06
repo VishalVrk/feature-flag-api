@@ -60,4 +60,4 @@ def get_variations():
 if __name__ == "__main__":
     port = int(os.getenv('PORT', 5125))
     debug = os.getenv('FLASK_DEBUG', 'True').lower() == 'true'
-    app.run(debug=debug, port=port)
+    app.run(host='0.0.0.0', debug=debug, port=port)  # Added host='0.0.0.0'
